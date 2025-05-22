@@ -2,114 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vexar Store - Digital Products</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vexar Studio - Digital Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
     }
     body {
-      background: #f0f0f5;
-      color: #222;
-      line-height: 1.5;
+      background: #0f0f0f;
+      color: white;
+      padding: 2rem;
     }
     header {
-      background: #333;
-      color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding-bottom: 2rem;
     }
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 5px;
+      font-size: 3rem;
+      color: #00ffb3;
+      animation: pop 1s ease;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 25px 0;
+    header p {
+      color: #aaa;
+      margin-top: 0.5rem;
     }
-    nav a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 10px 20px;
-      border-radius: 5px;
-      background: #ddd;
-      transition: background 0.3s ease;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    nav a:hover {
-      background: #bbb;
+    .card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,255,179,0.2);
+      transition: 0.3s ease;
     }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-      background: white;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(0,255,179,0.3);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    .buy-btn {
+      padding: 0.6rem 1.2rem;
+      background: #00ffb3;
+      border: none;
       border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
-    h2 {
-      margin-bottom: 15px;
-      color: #444;
-    }
-    .product {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ccc;
-    }
-    .product:last-child {
-      border-bottom: none;
-    }
-    .product h3 {
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .product p {
-      font-size: 0.95em;
-      color: #555;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
     }
     footer {
-      background: #333;
-      color: white;
       text-align: center;
-      padding: 18px 20px;
+      margin-top: 4rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Vexar Store</h1>
-    <p>Your go-to for digital templates and tools</p>
+    <h1>Vexar Studio</h1>
+    <p>Premium Templates, Tools & Digital Magic</p>
   </header>
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <section id="products">
-    <h2>Products</h2>
-    <div class="product">
-      <h3>Portfolio Template</h3>
-      <p>A clean and professional portfolio template perfect for developers and designers.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Portfolio Template</h2>
+      <p>Clean, mobile-friendly HTML resume site. Perfect for devs, freelancers & job seekers.</p>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-    <div class="product">
-      <h3>Notion Template Pack</h3>
-      <p>Organize your life and projects with these minimalistic, easy-to-use Notion templates.</p>
+
+    <div class="card">
+      <h2>Notion Planner</h2>
+      <p>Organize your daily chaos with this aesthetic Notion template. Easy to use, powerful flow.</p>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-    <div class="product">
-      <h3>Chatbot One-Page</h3>
-      <p>Embed this responsive chatbot widget on any website with ease.</p>
+
+    <div class="card">
+      <h2>Chatbot UI</h2>
+      <p>A 1-page, stylish AI chatbot frontend for demos, websites, or AI apps.</p>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: srikardeepala@gmail.com</p>
-    <p>Name: Vexar</p>
-  </section>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Vexar Store. All rights reserved.</p>
+    &copy; 2025 Vexar Studio | Built with caffeine & madness
   </footer>
 </body>
 </html>
