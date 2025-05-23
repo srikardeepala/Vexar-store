@@ -56,11 +56,12 @@
     .section {
       padding: 80px 20px;
       text-align: center;
-      animation: fadeUp 1.2s ease-in-out forwards;
       opacity: 0;
+      /* removed animation from here */
     }
     .section.show {
       opacity: 1;
+      /* animation applied dynamically by JS */
     }
     .section h2 {
       font-size: 2.4em;
@@ -186,14 +187,22 @@
 
   <script>
     const sections = document.querySelectorAll('.section');
-    window.addEventListener('scroll', () => {
+
+    function revealSections() {
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         if (rect.top < window.innerHeight - 50) {
-          section.classList.add('show');
+          if (!section.classList.contains('show')) {
+            section.classList.add('show');
+            section.style.animation = 'fadeUp 1.2s ease-in-out forwards';
+          }
         }
       });
-    });
+    }
+
+    window.addEventListener('scroll', revealSections);
+    // Trigger once on load in case some sections are visible immediately
+    window.addEventListener('load', revealSections);
   </script>
 </body>
 </html>
